@@ -28,6 +28,6 @@ jobs:
     - name: Install SQ.MSBuild
       run: dotnet tool install dotnet-sonarscanner -g
     - name: Sonar Prepare
-      run: SonarScanner.MSBuild.exe begin /k:devopsdylan_SQTest /o:devopsdylan /d:sonar.verbose=true
+      run: dotnet-sonarscanner begin /k:devopsdylan_SQTest /o:devopsdylan /d:sonar.verbose=true
     - name: Build
       run: dotnet build SQTest/SQTest.sln --configuration Release --no-restore
