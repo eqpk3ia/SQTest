@@ -26,6 +26,6 @@ jobs:
     - name: Install dependencies
       run: dotnet restore SQTest/SQTest.sln
     - name: Install SQ.MSBuild
-      run: nuget install dotnet-sonarscanner
+      run: dotnet tool install dotnet-sonarscanner -g
     - name: Build
       run: dotnet build SQTest/SQTest.sln --configuration Release --no-restore
