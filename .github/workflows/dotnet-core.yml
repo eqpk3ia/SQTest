@@ -21,6 +21,9 @@ jobs:
     - name: Setup Nuget
       uses: NuGet/setup-nuget@v1.0.2
       
+    - name: Install SQ.MSBuild
+      run: nuget install dotnet-sonarscanner
+      
     - name: Install dependencies
       run: dotnet restore SQTest/SQTest.sln
     - name: Build
