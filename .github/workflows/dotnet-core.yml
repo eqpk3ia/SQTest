@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -20,15 +20,18 @@ jobs:
 
     - name: Setup Nuget
       uses: NuGet/setup-nuget@v1.0.2
-      
-
+    - name: Setup Java 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11' # The JDK version to make available on the path.
+        java-package: jre # (jre, jdk, or jdk+fx) - defaults to jdk
       
     - name: Install dependencies
       run: dotnet restore SQTest/SQTest.sln
     - name: Install SQ.MSBuild
       run: dotnet tool install dotnet-sonarscanner -g
     - name: Sonar Prepare
-      run: dotnet-sonarscanner begin /k:devopsdylan_SQTest /o:devopsdylan /d:sonar.verbose=true /d:sonar.login=eb7cced101d71bbe6d3f1b35754977faca7b6627 /d:sonar.host.url="https://sonarcloud.io"
+      run: dotnet-sonarscanner begin /k:sqtest-gh /o:dylan-smith41309 /d:sonar.verbose=true /d:sonar.login=eb7cced101d71bbe6d3f1b35754977faca7b6627 /d:sonar.host.url="https://sonarcloud.io"
     - name: Build
       run: dotnet build SQTest/SQTest.sln --configuration Release --no-restore
     - name: Sonar Analyze
