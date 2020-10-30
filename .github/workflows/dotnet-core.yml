@@ -15,6 +15,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: Print ENV
       run: printenv
+    - name: print event path
+      run: echo $GITHUB_EVENT_PATH
+    - run: cat D:\a\_temp\_github_workflow\event.json
     - name: Print Event Payload
       run: cat $GITHUB_EVENT_PATH
     - name: Setup .NET Core
