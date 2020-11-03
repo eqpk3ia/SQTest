@@ -7,6 +7,7 @@ namespace SQTest
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            var foo = 12;
             
             if (17 > 12)
             {
