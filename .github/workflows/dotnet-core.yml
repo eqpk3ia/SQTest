@@ -40,7 +40,7 @@ jobs:
     - name: Install dependencies
       run: dotnet restore SQTest/SQTest.sln
     - name: Build
-      run: dotnet build SQTest/SQTest.sln --configuration Release --no-restore
+      run: dotnet build src/AdventOfCode.sln --configuration Release --no-restore
     - name: Build and analyze
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
