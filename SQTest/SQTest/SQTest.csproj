@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.ValueTuple" Version="4.4.0" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="4.4.1" />
+  </ItemGroup>
+
 </Project>
