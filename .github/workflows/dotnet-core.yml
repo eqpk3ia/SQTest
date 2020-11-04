@@ -34,9 +34,9 @@ jobs:
     - name: Build and analyze
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN2 }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       shell: pwsh
-      run: ./.sonar/scanner/dotnet-sonarscanner begin /k:"sqtest-gh" /d:sonar.login="${{ secrets.SONAR_TOKEN2 }}" /d:sonar.host.url="http://104.46.122.233:9000"
+      run: ./.sonar/scanner/dotnet-sonarscanner begin /k:"sqtest-gh" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="http://104.46.122.233:9000"
     - name: Install dependencies
       run: dotnet restore src/AdventOfCode.sln
     - name: Build
@@ -44,11 +44,11 @@ jobs:
     - name: Build and analyze
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN2 }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       shell: pwsh
       run: ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
     - name: Build Breaker
       uses: dylan-smith/sonarqube-buildbreaker@main
       with:
         sonarUrl: 'http://104.46.122.233:9000'
-        sonarToken: ${{ secrets.SONAR_TOKEN2 }}
+        sonarToken: ${{ secrets.SONAR_TOKEN }}
