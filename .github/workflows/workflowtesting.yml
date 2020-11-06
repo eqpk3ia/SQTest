@@ -13,3 +13,9 @@ jobs:
 
     steps:
     - run: printenv
+    - run: "echo base_ref: ${{ github.base_ref }}"
+    - run: "echo ${{ github.event }}"
+    - run: "echo event_path: ${{ github.event_path }}"
+    - run: "echo head_ref: ${{ github.head_ref }}"
+    - run: "echo repository: ${{ github.repository }}"
+      
