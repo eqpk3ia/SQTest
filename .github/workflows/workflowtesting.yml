@@ -18,4 +18,6 @@ jobs:
     - run: "echo event_path: ${{ github.event_path }}"
     - run: "echo head_ref: ${{ github.head_ref }}"
     - run: "echo repository: ${{ github.repository }}"
-      
+    - run: |
+        PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
+        echo PR_NUMBER
