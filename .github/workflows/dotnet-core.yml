@@ -37,7 +37,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       shell: pwsh
-      run: ./.sonar/scanner/dotnet-sonarscanner begin /k:"sqtest-gh" /o:"dylan-smith-github" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+      run: ./.sonar/scanner/dotnet-sonarscanner begin /k:"dylan-smith_SQTest" /o:"dylan-smith-github" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
     - name: Install dependencies
       run: dotnet restore src/AdventOfCode.sln
     - name: Build
