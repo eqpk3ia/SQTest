@@ -123,7 +123,7 @@ issueTypesToCreate: ['Story', 'Task', 'Bug', 'Subtask']
 
 # Optional Jira hostname configuration
 jira:
- host: 52.250.57.27
+ host: 52.175.230.55
  port: 8080
  protocol: http
  strict_ssl: false
