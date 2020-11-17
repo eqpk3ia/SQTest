@@ -4,13 +4,13 @@
 checksName: integrations/jira
 
 # Check PR Body for Jira issue (true | false)
-checkPRBody: true
+checkPRBody: false
 
 # Check PR Title for Jira issue (true | false)
 checkPRTitle: true
 
 # Check all commit messages for a Jira issue (true | false)
-checkCommitMessages: true
+checkCommitMessages: false
 
 # List of Jira statuses that an issue must be in in order to pass
 issueStatuses: ['Open', 'To Do', 'In Progress']
@@ -85,7 +85,7 @@ updateOnMerge: true
 # Enforce Protected branches on Pull Request
 # Will fail check if checkName is not listed as enforced on Protected branches
 # Default: true
-enforceBranchProtection: true
+enforceBranchProtection: false
 
 prBodyActions:
   - githubState: pull_request.merged
