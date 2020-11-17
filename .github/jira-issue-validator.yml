@@ -31,7 +31,7 @@ issuePrefixes: ['JIRA', 'TICKET', 'ISSUE', 'TEST', 'DEMO', 'MOTO']
 
 # When enabled, we will iterate through the jiraMappings configuration below to synchronize fields between
 # the PR Body and fields within Jira
-synchronizeBody: true
+synchronizeBody: false
 
 # List of Jira Issue fields and fields in a key/value table or between blocks in a GitHub pull request
 jiraMappings:
