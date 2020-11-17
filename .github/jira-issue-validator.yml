@@ -27,7 +27,7 @@ ignoreMergeCommits: true
 
 # List of valid Jira issue prefixes to search for
 # If left blank, this will search for any pattern matching "[a-z]{1,10}-[0-9]{1,10}"
-issuePrefixes: ['JIRA', 'TICKET', 'ISSUE', 'TEST', 'DEMO', 'DYL']
+issuePrefixes: ['JIRA', 'TICKET', 'ISSUE', 'TEST', 'DEMO', 'MOTO']
 
 # When enabled, we will iterate through the jiraMappings configuration below to synchronize fields between
 # the PR Body and fields within Jira
