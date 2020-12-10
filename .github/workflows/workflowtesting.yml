@@ -5,6 +5,13 @@ on:
   pull_request:
     branches: [ master ]
   workflow_dispatch:
+     inputs:
+      skipBuild:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'  
 
 jobs:
   build:
@@ -18,4 +25,8 @@ jobs:
     - run: "echo event_path: ${{ github.event_path }}"
     - run: "echo head_ref: ${{ github.head_ref }}"
     - run: "echo repository: ${{ github.repository }}"
+    - run: "echo RUNNING A BUILD"
+      if: github.event.inputs.skipBuild == false
+    - run: "echo SKIPPING THE BUILD"
+      if: github.event.inputs.skipBuild == true
       
