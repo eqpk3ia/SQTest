@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
      inputs:
       skipBuild:
-        description: 'Log level'     
+        description: 'Skip the build? (true/false)'     
         required: true
-        default: 'warning'
+        default: 'false'
       tags:
         description: 'Test scenario tags'  
 
