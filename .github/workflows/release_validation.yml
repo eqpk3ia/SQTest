@@ -2,6 +2,7 @@ name: Release Validation
 
 on:
   release:
+    types: [published, edited]
 
 jobs:
   build:
