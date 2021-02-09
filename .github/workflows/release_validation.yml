@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Download Release Files
-      run: gh release download v1.5
+      run: gh release download ${{ github.event.release.name }} --dir release_files
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Dump GitHub context
