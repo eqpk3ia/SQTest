@@ -18,3 +18,5 @@ jobs:
     - name: Print all files
       shell: cmd
       run: dir /S
+    - name: Validate Release Files
+      uses: dylan-smith/validate-release-files@master
