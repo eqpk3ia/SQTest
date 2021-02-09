@@ -15,8 +15,5 @@ jobs:
       run: gh release download ${{ github.event.release.name }} --dir release_files
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Print all files
-      shell: cmd
-      run: dir /S
     - name: Validate Release Files
       uses: dylan-smith/validate-release-files@master
