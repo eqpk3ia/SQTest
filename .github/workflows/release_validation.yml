@@ -16,4 +16,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Print all files
+      shell: cmd
       run: dir /S
