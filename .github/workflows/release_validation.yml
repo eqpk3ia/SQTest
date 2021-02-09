@@ -15,8 +15,5 @@ jobs:
       run: gh release download ${{ github.event.release.name }} --dir release_files
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Dump GitHub context
-      env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: |
-        echo "$GITHUB_CONTEXT"
+    - name: Print all files
+      run: dir /S
