@@ -3,7 +3,7 @@ name: Workflow Testing
 on:
   push:
   pull_request:
-    branches: [ master ]
+    branches: [ master, dylan-smith-patch-3 ]
   workflow_dispatch:
      inputs:
       skipBuild:
